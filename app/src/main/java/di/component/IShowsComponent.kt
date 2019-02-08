@@ -8,8 +8,6 @@ import javax.inject.Scope
 import javax.inject.Singleton
 
 
-@Singleton
-@ActivityScope
 @Subcomponent(modules = arrayOf(ShowsModule::class))
 interface IShowsComponent {
     fun inject(activity: MainActivity)

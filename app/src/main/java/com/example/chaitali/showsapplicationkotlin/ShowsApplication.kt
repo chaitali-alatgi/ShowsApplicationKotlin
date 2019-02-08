@@ -17,7 +17,7 @@ class ShowsApplication: Application() {
     }
 
     fun initializeDependencyInjector() {
-        appComponent = DaggerIAppComponent.builder()!!
+        appComponent = DaggerIAppComponent.builder()
                 .appModule(AppModule(this))
                 .networkModule(NetworkModule)
                 .build()

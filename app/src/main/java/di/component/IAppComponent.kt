@@ -1,5 +1,6 @@
 package di.component
 
+import com.example.chaitali.showsapplicationkotlin.MainActivity
 import com.example.chaitali.showsapplicationkotlin.ShowsApplication
 import dagger.Component
 import di.module.NetworkModule
@@ -12,4 +13,5 @@ import javax.inject.Singleton
 @Component(modules = [(AppModule:: class), (NetworkModule::class)])
 interface IAppComponent {
     fun inject(application: ShowsApplication)
+    fun inject(showsModule : ShowsModule) : IShowsComponent
 }
